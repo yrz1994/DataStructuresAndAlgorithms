@@ -1,7 +1,5 @@
 ﻿using SortingAlgorithm.Core.Interface;
 using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace SortingAlgorithm.Core
 {
@@ -9,7 +7,28 @@ namespace SortingAlgorithm.Core
     {
         public int[] Sort(int[] source)
         {
-            throw new NotImplementedException();
+            if (source == null) throw new ArgumentNullException();
+            for (var i = 0; i < source.Length - 1; i++)
+            {
+                var current = source[i + 1];
+                for (var j = i; j >= 0; j--)
+                {
+                    if (current < source[j])
+                    {
+                        source[j + 1] = source[j];
+                        if(j == 0)
+                        {
+                            source[j] = current;
+                        }
+                    }
+                    else
+                    {
+                        source[j + 1] = current;
+                        break;
+                    }
+                }
+            }
+            return source;
         }
     }
 }

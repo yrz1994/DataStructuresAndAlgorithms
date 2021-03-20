@@ -1,5 +1,7 @@
 # 常见数据结构与算法总结
 
+## 时间复杂度
+
 ![image](https://user-images.githubusercontent.com/18241650/111873059-805de100-89c9-11eb-9f93-71c3adfd97af.png)
 
 ## 排序算法

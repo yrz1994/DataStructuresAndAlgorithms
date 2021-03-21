@@ -6,21 +6,21 @@ using Xunit.Abstractions;
 
 namespace SortingAlgorithm.UnitTest
 {
-    public class InsertionSortTest
+    public class ShellSortTest
     {
         private readonly ITestOutputHelper _output;
 
-        public InsertionSortTest(ITestOutputHelper output)
+        public ShellSortTest(ITestOutputHelper output)
         {
             _output = output;
         }
 
         [Theory]
-        [MemberData(nameof(SortData.TestData), MemberType =typeof(SortData))]
+        [MemberData(nameof(SortData.TestData), MemberType = typeof(SortData))]
         public void ShouldBeSorted(int[] input, string expect)
         {
             //Arrange
-            var sut = new InsertionSort(); //sut: system under test
+            var sut = new ShellSort(); //sut: system under test
 
             //Act
             var result = sut.Sort(input);
@@ -34,7 +34,7 @@ namespace SortingAlgorithm.UnitTest
         public void ShouldInOrderWithLargeArray()
         {
             //Arrange
-            var sut = new InsertionSort(); //sut: system under test
+            var sut = new ShellSort(); //sut: system under test
             var array = new int[] { 5, 9, 6, 4, 1, 7, 1, 7, 3, 8, 2, 0, 5, 9, 6, 4, 1, 3, 8, 2, 0, 5, 9, 6, 4, 1, 7, 3, 8, 2, 0, 5, 9, 6, 4, 1, 7, 3, 8, 2, 0, 5, 9, 6, 4, 1, 7, 3, 8, 2, 0, 5, 9, 6, 4, 1, 7, 3, 8, 2, 0 };
 
             //Act
@@ -47,7 +47,7 @@ namespace SortingAlgorithm.UnitTest
                 result = sut.Sort(array);
             }
             stopwatch.Stop();
-            _output.WriteLine($"InsertionSort finished in {stopwatch.ElapsedMilliseconds}ms.");
+            _output.WriteLine($"ShellSort finished in {stopwatch.ElapsedMilliseconds}ms.");
 
             //Assert
             Assert.Equal("0,0,0,0,0,0,1,1,1,1,1,1,1,2,2,2,2,2,2,3,3,3,3,3,3,4,4,4,4,4,4,5,5,5,5,5,5,6,6,6,6,6,6,7,7,7,7,7,7,8,8,8,8,8,8,9,9,9,9,9,9", string.Join(',', result));
@@ -56,7 +56,7 @@ namespace SortingAlgorithm.UnitTest
         [Fact]
         public void ShouldNotBeNull()
         {
-            var sut = new InsertionSort();
+            var sut = new ShellSort();
 
             Assert.Throws<ArgumentNullException>(() => sut.Sort(null));
         }

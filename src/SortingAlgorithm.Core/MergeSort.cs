@@ -6,7 +6,10 @@ namespace SortingAlgorithm.Core
     public class MergeSort : IArraySort
     {
         /* 归并排序
-         * 时间复杂度O(NlogN)，空间复杂度：O(N)，稳定排序
+         * 时间复杂度O(nlogn)，空间复杂度：O(n)，稳定排序
+         * 最优时间复杂度：O(nlogn)
+         * 最坏时间复杂度：O(nlogn)
+         * 最佳解：有时是
          */
         public int[] Sort(int[] source)
         {
@@ -26,7 +29,7 @@ namespace SortingAlgorithm.Core
             }
         }
 
-        public void Merge(int[] source, int first, int mid, int last)
+        private void Merge(int[] source, int first, int mid, int last)
         {
             var merged = new int[last - first + 1];
             int leftHead = first, rightHead = mid + 1;

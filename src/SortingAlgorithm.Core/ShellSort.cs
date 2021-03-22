@@ -6,9 +6,10 @@ namespace SortingAlgorithm.Core
     public class ShellSort : IArraySort
     {
         /* 希尔排序
-         * 时间复杂度O(N3/2)，空间复杂度：O(1)，不稳定排序
-         * 最优情况：时间复杂度：O(N*log2N)
-         * 最差情况：时间复杂度：O(N3/2)
+         * 时间复杂度：根据步长序列的不同而不同，空间复杂度：O(1)，不稳定排序
+         * 最优时间复杂度：O(n)
+         * 最差时间复杂度：根据步长序列的不同而不同，已知最好：O(nlog^2n)
+         * 非最佳算法
          */
         public int[] Sort(int[] source)
         {

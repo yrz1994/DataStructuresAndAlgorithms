@@ -6,9 +6,10 @@ namespace SortingAlgorithm.Core
     public class SelectionSort : IArraySort
     {
         /* 选择排序
-         * 时间复杂度O(N^2)，空间复杂度：O(1)，不稳定排序
-         * 最优情况：时间复杂度：O(N^2)
-         * 最差情况：时间复杂度：O(N^2)
+         * 时间复杂度O(n^2)，空间复杂度：O(1)，不稳定排序
+         * 最优情况：时间复杂度：O(n^2)
+         * 最差情况：时间复杂度：O(n^2)
+         * 最佳解：偶尔出现
          */
         public int[] Sort(int[] source)
         {

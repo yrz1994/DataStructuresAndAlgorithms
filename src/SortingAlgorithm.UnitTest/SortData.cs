@@ -7,7 +7,7 @@ namespace SortingAlgorithm.UnitTest
         private static readonly IEnumerable<object[]> _sortData = new List<object[]>()
         {
             new object[]{ new int[] {3,1,2,5,4 }, "1,2,3,4,5"},
-            new object[]{ new int[] {3,1,2,5,6,2,4,1,9999999,123 }, "1,1,2,2,3,4,5,6,123,9999999"},
+            new object[]{ new int[] {3,1,2,5,6,2,4,1,9999999,123,0 }, "0,1,1,2,2,3,4,5,6,123,9999999"},
             new object[]{ new int[] {1,2,3,4,5,6,7,8,9,10 }, "1,2,3,4,5,6,7,8,9,10"},
             new object[]{ new int[] {10,9,8,7,6,5,4,3,2,1 }, "1,2,3,4,5,6,7,8,9,10"},
             new object[]{

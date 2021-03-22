@@ -10,24 +10,56 @@ namespace SortingAlgorithm.Core
          */
         public int[] Sort(int[] source)
         {
-            throw new NotImplementedException();
-            //if (source == null) throw new ArgumentNullException();
-            //Sort(source, 0, source.Length - 1);
-            //return source;
+            if (source == null) throw new ArgumentNullException();
+            Sort(source, 0, source.Length - 1);
+            return source;
         }
 
-        //private void Sort(int[] source, int first, int last)
-        //{
-        //    if(first < last)
-        //    {
-        //    }
-        //}
+        private void Sort(int[] source, int first, int last)
+        {
+            if (first < last)
+            {
+                var mid = first + ((last - first) / 2);
+                Sort(source, first, mid);
+                Sort(source, mid + 1, last);
+                Merge(source, first, mid, last);
+            }
+        }
 
-        //public int[] Merge(int[] array1, int[] array2)
-        //{
-        //    var merged = new int[array1.Length + array2.Length];
-
-        //    return merged;
-        //}
+        public void Merge(int[] source, int first, int mid, int last)
+        {
+            var merged = new int[last - first + 1];
+            int leftHead = first, rightHead = mid + 1;
+            for (var i = 0; i < merged.Length; i++)
+            {
+                if(leftHead > mid)
+                {
+                    merged[i] = source[rightHead];
+                    rightHead++;
+                }
+                else if(rightHead > last)
+                {
+                    merged[i] = source[leftHead];
+                    leftHead++;
+                }
+                else
+                {
+                    if (source[leftHead] <= source[rightHead])
+                    {
+                        merged[i] = source[leftHead];
+                        leftHead++;
+                    }
+                    else
+                    {
+                        merged[i] = source[rightHead];
+                        rightHead++;
+                    }
+                }
+            }
+            for(int i = first, j = 0; i <= last; i++, j++)
+            {
+                source[i] = merged[j];
+            }
+        }
     }
 }

@@ -13,18 +13,18 @@ namespace SortingAlgorithm.Core
         public int[] Sort(int[] source)
         {
             if (source == null) throw new ArgumentNullException();
-            for (int gap = source.Length / 2; gap > 0; gap /= 2)
+            for (var gap = source.Length / 2; gap > 0; gap /= 2)
             {
                 for (var i = gap; i < source.Length; i++)
                 {
-                    var current = source[i];
+                    var temp = source[i];
                     var j = i - gap;
-                    while(j >= 0 && source[j] > current)
+                    while (j >= 0 && source[j] > temp)
                     {
                         source[j + gap] = source[j];
                         j -= gap;
                     }
-                    source[j + gap] = current;
+                    source[j + gap] = temp;
                 }
             }
             return source;

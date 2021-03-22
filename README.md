@@ -11,7 +11,7 @@
 | 冒泡排序 | O(n^2) | O(n) | O(n^2) | O(1) | 稳定 |
 | 选择排序 | O(n^2) | O(n^2) | O(n^2) | O(1) | 不稳定 |
 | 插入排序 | O(n^2) | O(n) | O(n^2) | O(1) | 稳定 |
-| 希尔排序 | O(nlogn) | O(nlog^2n) | O(nlog^2n) | O(1) | 不稳定 |
+| 希尔排序 | O(N^3/2) | O(nlog2n) | O(N^3/2) | O(1) | 不稳定 |
 | 归并排序 | O(nlogn) | O(nlogn) | O(nlogn) | O(n) | 稳定 |
 | 快速排序 | O(nlogn) | O(nlogn) | O(n^2) | O(log n) | 不稳定 |
 | 堆排序 | O(nlogn) | O(nlogn) | O(nlogn) | O(1) | 不稳定 |

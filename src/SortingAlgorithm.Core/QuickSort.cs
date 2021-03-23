@@ -1,6 +1,5 @@
 ﻿using SortingAlgorithm.Core.Interface;
 using System;
-using System.Collections.Generic;
 
 namespace SortingAlgorithm.Core
 {
@@ -12,14 +11,54 @@ namespace SortingAlgorithm.Core
      * 最坏情况时间复杂度：O(n^2)
      * 最佳解：	有时是
      */
-    //public class QuickSort : IArraySort
-    //{
-    //    public int[] Sort(int[] source)
-    //    {
-    //        if (source == null) throw new ArgumentNullException();
-    //        if (source.Length <= 1) return source;
+    public class QuickSort : IArraySort
+    {
+        public int[] Sort(int[] source)
+        {
+            if (source == null) throw new ArgumentNullException();
+            if (source.Length <= 1) return source;
+            DoSort(source, 0, source.Length - 1);
+            return source;
+        }
 
-    //        return source; 
-    //    }
-    //}
+        public void DoSort(int[] source, int first, int last)
+        {
+            if (first >= last) return;
+            int i = first, j = last;
+            var key = source[first];
+            bool isSearchFront = true;
+            while (i < j)
+            {
+                if (isSearchFront)
+                {
+                    if (source[j] < key)
+                    {
+                        source[i] = source[j];
+                        source[j] = key;
+                        isSearchFront = false;
+                    }
+                    else
+                    {
+                        j--;
+                    }
+                }
+                else
+                {
+                    if (source[i] > key)
+                    {
+                        source[j] = source[i];
+                        source[i] = key;
+                        isSearchFront = true;
+                    }
+                    else
+                    {
+                        i++;
+                    }
+                }
+            }
+            DoSort(source, first, i);
+            DoSort(source, i + 1, last);
+
+        }
+    }
 }

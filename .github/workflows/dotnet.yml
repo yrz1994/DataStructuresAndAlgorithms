@@ -19,17 +19,9 @@ jobs:
         dotnet-version: 5.0.x
     - name: Show Directory
       run: pwd
-    - name: Show File
-      run: ls
-    - name: Go To src
-      run: cd src
-    - name: Show Directory2
-      run: pwd
-    - name: Show File2
-      run: ls
     - name: Restore dependencies
-      run: dotnet restore
+      run: dotnet restore ./src/DataStructuresAndAlgorithms.sln
     - name: Build
-      run: dotnet build --no-restore
+      run: dotnet build --no-restore ./src/DataStructuresAndAlgorithms.sln
     - name: Test
-      run: dotnet test --no-build --verbosity normal
+      run: dotnet test --no-build --verbosity normal ./src/DataStructuresAndAlgorithms.sln

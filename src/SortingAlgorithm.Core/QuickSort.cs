@@ -5,7 +5,7 @@ namespace SortingAlgorithm.Core
 {
     /* 快速排序
      * 平均时间复杂度：O(nlogn)
-     * 空间复杂度：根据实现的方式不同而不同，最佳情况O(nlog)
+     * 空间复杂度：根据实现的方式不同而不同，最佳情况O(nlogn)
      * 不稳定排序
      * 最优情况时间复杂度：O(nlogn)
      * 最坏情况时间复杂度：O(n^2)

@@ -3,12 +3,8 @@ name: .NET 5 CI
 on:
   push:
     branches: [ main ]
-    paths:
-    - src/**
   pull_request:
     branches: [ main ]
-    paths:
-    - src/**
 
 jobs:
   build:
@@ -21,8 +17,10 @@ jobs:
       uses: actions/setup-dotnet@v1
       with:
         dotnet-version: 5.0.x
-    - name: Change Directory
-      run: cd ./src
+    - name: Show Directory
+      run: pwd
+    - name: Show File
+      run: ls
     - name: Restore dependencies
       run: dotnet restore
     - name: Build

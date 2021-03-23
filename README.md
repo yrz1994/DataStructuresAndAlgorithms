@@ -14,7 +14,7 @@
 | [插入排序](https://github.com/yrz1994/DataStructuresAndAlgorithms/blob/main/src/SortingAlgorithm.Core/InsertionSort.cs) | O(n^2) | O(n) | O(n^2) | O(1) | 稳定 |
 | [希尔排序](https://github.com/yrz1994/DataStructuresAndAlgorithms/blob/main/src/SortingAlgorithm.Core/ShellSort.cs) | O(N^3/2) | O(nlog2n) | O(N^3/2) | O(1) | 不稳定 |
 | [归并排序](https://github.com/yrz1994/DataStructuresAndAlgorithms/blob/main/src/SortingAlgorithm.Core/MergeSort.cs) | O(nlogn) | O(nlogn) | O(nlogn) | O(n) | 稳定 |
-| [快速排序](https://github.com/yrz1994/DataStructuresAndAlgorithms/blob/main/src/SortingAlgorithm.Core/QuickSort.cs) | O(nlogn) | O(nlogn) | O(n^2) | O(log n) | 不稳定 |
+| [快速排序](https://github.com/yrz1994/DataStructuresAndAlgorithms/blob/main/src/SortingAlgorithm.Core/QuickSort.cs) | O(nlogn) | O(nlogn) | O(n^2) | O(nlog n) | 不稳定 |
 | 堆排序 | O(nlogn) | O(nlogn) | O(nlogn) | O(1) | 不稳定 |
 | 计数排序 | O(n+k) | O(n+k) | O(n+k) | O(k) | 稳定 |
 | 桶排序 | O(n+k) | O(n+k) | O(n^2) | O(n+k) | 稳定 |

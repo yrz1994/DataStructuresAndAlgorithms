@@ -21,6 +21,8 @@ jobs:
       run: pwd
     - name: Show File
       run: ls
+    - name: Go To src
+      run: cd src
     - name: Restore dependencies
       run: dotnet restore
     - name: Build

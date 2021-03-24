@@ -5,7 +5,13 @@ VisualStudioVersion = 16.0.31112.23
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SortingAlgorithm.Core", "SortingAlgorithm.Core\SortingAlgorithm.Core.csproj", "{5791A589-F6EC-409D-BE31-CB48CCAD8C41}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SortingAlgorithm.UnitTest", "SortingAlgorithm.UnitTest\SortingAlgorithm.UnitTest.csproj", "{9229A450-F845-400F-B3B4-D9124ADBEA9F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SortingAlgorithm.UnitTest", "SortingAlgorithm.UnitTest\SortingAlgorithm.UnitTest.csproj", "{9229A450-F845-400F-B3B4-D9124ADBEA9F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DataStructure", "DataStructure", "{BC269EF8-D379-412B-9AE1-A857B96B9BE6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SortingAlgorithm", "SortingAlgorithm", "{D0F6CCD9-F0D3-4B42-BAE8-092FCE1B2E90}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataStructure.Core", "DataStructure.Core\DataStructure.Core.csproj", "{14CEA079-2296-478C-AD5D-F2E657165729}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,9 +27,18 @@ Global
 		{9229A450-F845-400F-B3B4-D9124ADBEA9F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9229A450-F845-400F-B3B4-D9124ADBEA9F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9229A450-F845-400F-B3B4-D9124ADBEA9F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{14CEA079-2296-478C-AD5D-F2E657165729}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{14CEA079-2296-478C-AD5D-F2E657165729}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{14CEA079-2296-478C-AD5D-F2E657165729}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{14CEA079-2296-478C-AD5D-F2E657165729}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{5791A589-F6EC-409D-BE31-CB48CCAD8C41} = {D0F6CCD9-F0D3-4B42-BAE8-092FCE1B2E90}
+		{9229A450-F845-400F-B3B4-D9124ADBEA9F} = {D0F6CCD9-F0D3-4B42-BAE8-092FCE1B2E90}
+		{14CEA079-2296-478C-AD5D-F2E657165729} = {BC269EF8-D379-412B-9AE1-A857B96B9BE6}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {184AB08C-908E-4061-A12D-1A38DF849C66}

@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 
 namespace DataStructure.Core.BinaryTree
 {
@@ -40,9 +41,9 @@ namespace DataStructure.Core.BinaryTree
         {
             var result = new List<int>();
             var stack = new Stack<TreeNode>();
-            while(root != null || stack.Count != 0)
+            while (root != null || stack.Count != 0)
             {
-                while(root != null)
+                while (root != null)
                 {
                     stack.Push(root);
                     root = root.LeftChild;
@@ -153,7 +154,7 @@ namespace DataStructure.Core.BinaryTree
                     root = root.LeftChild;
                 }
                 root = stack.Pop();
-                if(root.RightChild == null || root.RightChild == preNode)
+                if (root.RightChild == null || root.RightChild == preNode)
                 {
                     result.Add(root.Value);
                     preNode = root;
@@ -170,5 +171,63 @@ namespace DataStructure.Core.BinaryTree
 
         #endregion
 
+        #region>层序遍历
+
+        /// <summary>
+        /// 递归层序遍历
+        /// </summary>
+        /// <param name="root"></param>
+        /// <returns></returns>
+        public IList<IList<int>> LevelOrderTraversal(TreeNode root)
+        {
+            var result = new List<IList<int>>();
+            LevelOrder(result, root, 0);
+            return result;
+        }
+
+        private void LevelOrder(List<IList<int>> list, TreeNode root, int depth)
+        {
+            if (root != null)
+            {
+                if (list.Count == depth)
+                {
+                    list.Add(new List<int>());
+                }
+                list[depth].Add(root.Value);
+                LevelOrder(list, root.LeftChild, depth + 1);
+                LevelOrder(list, root.RightChild, depth + 1);
+            }
+        }
+
+        /// <summary>
+        /// 利用队列实现广度优先遍历
+        /// </summary>
+        /// <param name="root"></param>
+        /// <returns></returns>
+        public IList<IList<int>> LevelOrderTraversalBFS(TreeNode root)
+        {
+            var result = new List<IList<int>>();
+            var queue = new Queue<TreeNode>();
+            if (root != null)
+            {
+                queue.Enqueue(root); 
+            }
+            while (queue.Count != 0)
+            {
+                var list = new List<int>();
+                var count = queue.Count;
+                for(var i = 0; i < count; i++)
+                {
+                    root = queue.Dequeue();
+                    list.Add(root.Value);
+                    if (root.LeftChild != null) queue.Enqueue(root.LeftChild);
+                    if (root.RightChild != null) queue.Enqueue(root.RightChild);
+                }
+                result.Add(list);
+            }
+            return result;
+        }
+
+        #endregion
     }
 }

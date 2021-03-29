@@ -2,6 +2,11 @@
 {
     public class BinaryTreeFunction
     {
+        /// <summary>
+        /// 递归法构造二叉树
+        /// </summary>
+        /// <param name="input"></param>
+        /// <returns></returns>
         public TreeNode CreateBinaryTree(int[] input)
         {
             if (input == null || input.Length == 0) return null;
@@ -15,6 +20,12 @@
             head.LeftChild = CreateNode(input, current * 2);
             head.RightChild = CreateNode(input, current * 2 + 1);
             return head;
+        }
+
+        public int[][] SequenceOutputBinaryTree(TreeNode head)
+        {
+
+            return null;
         }
     }
 }

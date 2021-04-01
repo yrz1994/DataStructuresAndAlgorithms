@@ -56,7 +56,7 @@ namespace SortingAlgorithm.Core
                     }
                 }
             }
-            DoSort(source, first, i);
+            DoSort(source, first, i - 1);
             DoSort(source, i + 1, last);
         }
     }

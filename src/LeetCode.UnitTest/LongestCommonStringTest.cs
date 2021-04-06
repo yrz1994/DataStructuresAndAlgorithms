@@ -32,6 +32,19 @@ namespace LeetCode.UnitTest
             //Assert
             Assert.Equal(3, result);
         }
+
+        [Fact]
+        public void IsSubsequenceTest()
+        {
+            //Arrange
+            var sut = new LongestCommonString(); //sut: system under test
+
+            //Act
+            var result = sut.IsSubsequence("abc", "ahbgdc");
+
+            //Assert
+            Assert.True(result);
+        }
     }
 
     public class LongestCommonSubstringData

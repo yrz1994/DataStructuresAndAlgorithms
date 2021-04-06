@@ -59,5 +59,28 @@ namespace LeetCode.Core
             }
             return sum;
         }
+
+        /// <summary>
+        /// 判断是否是字符串的子序列
+        /// </summary>
+        /// <param name="s"></param>
+        /// <param name="t"></param>
+        /// <returns></returns>
+        public bool IsSubsequence(string s, string t)
+        {
+            if (string.IsNullOrEmpty(s)) return true;
+            if (string.IsNullOrEmpty(t)) return false;
+            int i = 0, j = 0;
+            var array_s = s.ToCharArray();
+            var array_t = t.ToCharArray();
+            while(i < array_s.Length && j < array_t.Length)
+            {
+                if(array_s[i] == array_t[j++])
+                {
+                    i++;
+                }
+            }
+            return i == array_s.Length;
+        }
     }
 }

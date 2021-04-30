@@ -9,15 +9,15 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SortingAlgorithm.UnitTest",
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DataStructure", "DataStructure", "{BC269EF8-D379-412B-9AE1-A857B96B9BE6}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SortingAlgorithm", "SortingAlgorithm", "{D0F6CCD9-F0D3-4B42-BAE8-092FCE1B2E90}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Algorithm", "Algorithm", "{D0F6CCD9-F0D3-4B42-BAE8-092FCE1B2E90}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataStructure.Core", "DataStructure.Core\DataStructure.Core.csproj", "{14CEA079-2296-478C-AD5D-F2E657165729}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataStructure.UnitTest", "DataStructure.UnitTest\DataStructure.UnitTest.csproj", "{E04C538D-386C-4D56-9ACC-265BB9C29203}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LeetCode.UnitTest", "LeetCode.UnitTest\LeetCode.UnitTest.csproj", "{180CB75C-BE91-4120-80E3-FC047B8260F5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LeetCode.UnitTest", "LeetCode.UnitTest\LeetCode.UnitTest.csproj", "{180CB75C-BE91-4120-80E3-FC047B8260F5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LeetCode.Core", "LeetCode.Core\LeetCode.Core.csproj", "{42367869-253A-441E-91C0-E511AA6812B9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LeetCode.Core", "LeetCode.Core\LeetCode.Core.csproj", "{42367869-253A-441E-91C0-E511AA6812B9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
